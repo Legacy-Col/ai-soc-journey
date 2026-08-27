@@ -48,11 +48,11 @@ NB: As a SOC analyst never say something that you are not sure of and have no pr
 
 # Evidence
 ---> !Index and Sourcetype 
-    --> ScreenShots/Telemetry/index-sourcety.png
+    --> lab/ScreenShots/Telemetry/index-sourcety.png
 ---> !WAZUH Agent status
-    --> ScreenShots/Telemetry/"WAZUH DASH.png"
+    --> lab/ScreenShots/Telemetry/"WAZUH DASH.png"
 ---> !Sysmon Events
-    --> ScreenShots/Telemtry/event-code--mon.png
+    --> lab/ScreenShots/Telemtry/event-code--mon.png
 ---> !EventCode for Windows Event Logs
-    --> ScreenShots/Telemtry/eventcode.png
+    --> lab/ScreenShots/Telemtry/eventcode.png
     
