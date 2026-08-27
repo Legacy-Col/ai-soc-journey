@@ -1,6 +1,6 @@
 This is where our telemetry will  be coming from and how they'll be processed
 
-# Sysmon
+### Sysmon
 ---> Index: main
 ---> Sourcetype: XmlWinEventlog:Microsoft-Windows-Sysmon\Operational
 ---> Events
@@ -9,7 +9,7 @@ This is where our telemetry will  be coming from and how they'll be processed
     --> File Creation
     --> Registry Activities
 
-# Windows Application / Security / System
+### Windows Application / Security / System
 
 ---> Index: soc-lab
 ---> Sourcetypes:
@@ -23,7 +23,7 @@ This is where our telemetry will  be coming from and how they'll be processed
 ---> Event types:
      --> To be identified and documented based on observed Event IDs
 
-# Wazuh
+### Wazuh
 
 ---> Platform: Wazuh Cloud
 ---> Agent: Windows 11 VM
@@ -33,7 +33,7 @@ This is where our telemetry will  be coming from and how they'll be processed
      --> Log collection
      --> Security event analysis
 
-# Splunk
+### Splunk
 
 ---> Platform: Splunk Enterprise
 ---> Host: Windows 11 VM
@@ -46,13 +46,9 @@ This is where our telemetry will  be coming from and how they'll be processed
 
 NB: As a SOC analyst never say something that you are not sure of and have no proof about it.
 
-# Evidence
----> !Index and Sourcetype 
-    --> lab/ScreenShots/Telemetry/index-sourcety.png
----> !WAZUH Agent status
-    --> lab/ScreenShots/Telemetry/"WAZUH DASH.png"
----> !Sysmon Events
-    --> lab/ScreenShots/Telemtry/event-code--mon.png
----> !EventCode for Windows Event Logs
-    --> lab/ScreenShots/Telemtry/eventcode.png
+### Evidence
+---> ![Index and Sourcetype](lab/ScreenShots/Telemetry/index-sourcety.png)
+---> ![WAZUH Agent status](lab/ScreenShots/Telemetry/WAZUH_DASH.png)
+---> ![Sysmon Events](lab/ScreenShots/Telemtry/event-code-mon.png)
+---> ![EventCode for Windows Event Logs](lab/ScreenShots/Telemetry/eventcode.png)
     
