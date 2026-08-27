@@ -47,8 +47,8 @@ This is where our telemetry will  be coming from and how they'll be processed
 NB: As a SOC analyst never say something that you are not sure of and have no proof about it.
 
 ### Evidence
----> ![Index and Sourcetype](lab/ScreenShots/Telemetry/index-sourcety.png)
----> ![WAZUH Agent status](lab/ScreenShots/Telemetry/WAZUH_DASH.png)
----> ![Sysmon Events](lab/ScreenShots/Telemtry/event-code-mon.png)
----> ![EventCode for Windows Event Logs](lab/ScreenShots/Telemetry/eventcode.png)
+---> ![Index and Sourcetype](ScreenShots/Telemetry/index-sourcety.png)
+---> ![WAZUH Agent status](ScreenShots/Telemetry/WAZUH_DASH.png)
+---> ![Sysmon Events](ScreenShots/Telemtry/event-code-mon.png)
+---> ![EventCode for Windows Event Logs](ScreenShots/Telemetry/eventcode.png)
     
