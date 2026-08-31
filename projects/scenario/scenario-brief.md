@@ -29,12 +29,12 @@ What happened on the endpoint, whether the activity is malicious, how the activi
 Your final investigation should answer these:
 
 ### Initial triage
-What endpoint generated the activity?
-When did the suspicious activity begin?
-Which user/account was involved?
-What process executed?
-What was the parent process?
-What command line was used?
-Was PowerShell interacting with another process?
+- What endpoint generated the activity?
+- When did the suspicious activity begin?
+- Which user/account was involved?
+- What process executed?
+- What was the parent process?
+- What command line was used?
+- Was PowerShell interacting with another process?
 
 
