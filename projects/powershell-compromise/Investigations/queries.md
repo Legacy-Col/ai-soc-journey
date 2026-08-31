@@ -8,7 +8,7 @@ Windows endpoint.
 ### SPL
 
 ```spl
-index=main sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1
+index=main source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1
 | table _time host User Image ParentImage CommandLine ProcessId ParentProcessId
 | sort - _time
 
@@ -29,33 +29,53 @@ index=main source=XmlEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 
 ```
 
 ### Reason For Observation
-I noticed that `explorer.exe` was starting the snipping tool `snip.exe` which to me it wasn't supposed to be like that.
+During the review of the baseline process-creation events, I observed
+that explorer.exe was identified as the parent process of snip.exe.
+
+This process relationship was selected for further investigation to
+determine whether the observed parent-child relationship was expected
+for the endpoint.
 
 ### Observation
-The querry showed me the details of the process and also told me how the process was suposed to function and the type of service that was running it.
+The selected Sysmon Event ID 1 event showed explorer.exe as the parent
+process associated with snip.exe.
 
+The event provided additional information about the process execution,
+including the process relationship and available execution details.
+
+### Assessment
+The observed parent-child relationship alone does not establish
+malicious activity. Additional evidence would be required to determine
+whether the execution was expected or suspicious.
 
 ## Query 003 — Hash-Based Process Investigation
 
 ### Objective
 
 Investigate the SHA-256 hash associated with the selected process and
-determine whether the same executable/hash appears across other
+determine whether the same executable or hash appears across other
 process-creation events.
 
 ### Analysis
 
-The SHA-256 hash was used as an identifier for the executable during
-the investigation. The hash was compared against related events to
-determine whether the same executable appeared elsewhere in the
-available telemetry. This was copied and sent to virus total for hash analysis to check if it was ever part of any breach 
+he SHA-256 hash was used as an identifier for the executable during
+the investigation.
+
+The hash was submitted to VirusTotal to determine whether the
+associated file had previously been identified by security vendors or
+associated with known malicious activity.
+
+### Observation
+
+The SHA-256 hash associated with the selected process was:
+E2F5C2B9E4FBF021D0559F14F657C864AB500D7C6036A9EF488FB99CEA4883D
 
 ### Evidence
 
-![Virustotal hash analysis](/endpoints/virustotal-hash-analysis.png)
+![Virustotal hash analysis](Evidence/endpoints/virustotal-hash-analysis.png)
 
 ### Assessment
-
+The report from VirusTotal came clean telling us that the process is a legitimate windows process.
 
 ### SPL
 ```spl
