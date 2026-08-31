@@ -52,7 +52,7 @@ available telemetry. This was copied and sent to virus total for hash analysis t
 
 ### Evidence
 
-![Virustotal hash analysis](/Evidence/endpoints/virustotal-hash-analysis.png)
+![Virustotal hash analysis](/endpoints/virustotal-hash-analysis.png)
 
 ### Assessment
 
