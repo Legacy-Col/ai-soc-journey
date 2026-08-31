@@ -14,8 +14,13 @@ index=main sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" Even
 
 ```
 
-### Process Analysis
-This querry was used when I wanted to analys one of the events 
+## Query 002 — Parent Process Analysis
+
+### Objective
+
+Investigate the parent process associated with the selected process
+creation event and determine whether the process was spawned by
+`explorer.exe`.
 
 ### SPL
 
@@ -23,8 +28,34 @@ This querry was used when I wanted to analys one of the events
 index=main source=XmlEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 ParentImage="C:\\Windows\\explorer.exe"
 ```
 
-### Hash Analysis
-This querry made use of the HASH to make sure the process generated from just one parent
+### Reason For Observation
+I noticed that `explorer.exe` was starting the snipping tool `snip.exe` which to me it wasn't supposed to be like that.
+
+### Observation
+The querry showed me the details of the process and also told me how the process was suposed to function and the type of service that was running it.
+
+
+## Query 003 — Hash-Based Process Investigation
+
+### Objective
+
+Investigate the SHA-256 hash associated with the selected process and
+determine whether the same executable/hash appears across other
+process-creation events.
+
+### Analysis
+
+The SHA-256 hash was used as an identifier for the executable during
+the investigation. The hash was compared against related events to
+determine whether the same executable appeared elsewhere in the
+available telemetry. This was copied and sent to virus total for hash analysis to check if it was ever part of any breach 
+
+### Evidence
+
+![Virustotal hash analysis](/Evidence/endpoints/virustotal-hash-analysis.png)
+
+### Assessment
+
 
 ### SPL
 ```spl
