@@ -2,11 +2,11 @@ This is a briefing on what I did and the Scenario is recorded below
 
 ### INC-001 — Suspicious PowerShell Execution
 
-Date: 29 August 2026
-Severity: Medium — Initial
-Status: Open
-Affected Asset: Windows 11 workstation
-Detection Source: SOC monitoring infrastructure
+- Date: 29 August 2026
+- Severity: Medium — Initial
+- Status: Open
+- Affected Asset: Windows 11 workstation
+- Detection Source: SOC monitoring infrastructure
 
 ### Analyst Briefing
 
