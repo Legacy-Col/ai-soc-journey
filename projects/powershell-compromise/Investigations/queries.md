@@ -80,3 +80,26 @@ The report from VirusTotal came clean telling us that the process is a legitimat
 ### SPL
 ```spl
 index=main source=XmlEventLog:Microsoft-Windows-Sysmon/Operational EventCode=1 ParentExplorer=explorer.exe SHA256=E2F5C2B9E4FBF021D0559F14F657C864AB500D7C6036A9EF488FB99CEA4883D
+```
+
+## Query 004 — PowerShell Process Identification
+
+### Objective
+Identify the PowerShell process generated during the controlled test
+and determine how the execution appears within Sysmon telemetry.
+
+### SPL
+
+``` spl
+index=* source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1   User="DESKTOP-QRORG7R\\kaizen"  ParentImage="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+```
+
+### Observation
+The command was a powershell command that was used to write a file called `AI SOC PROJECT`
+
+### Evidence
+
+[Link to screenshot]
+
+### Assessment
+From my Investigation I can say this was just an attempt to see if logs we're actually passing through or the user testing his knowledge
