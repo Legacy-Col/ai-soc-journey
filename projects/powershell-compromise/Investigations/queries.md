@@ -85,21 +85,43 @@ index=main source=XmlEventLog:Microsoft-Windows-Sysmon/Operational EventCode=1 P
 ## Query 004 — PowerShell Process Identification
 
 ### Objective
-Identify the PowerShell process generated during the controlled test
-and determine how the execution appears within Sysmon telemetry.
+
+Identify the PowerShell process generated during the controlled test and
+determine how the execution appears within Sysmon telemetry.
 
 ### SPL
 
-``` spl
-index=* source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1   User="DESKTOP-QRORG7R\\kaizen"  ParentImage="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+```spl
+index=main source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1
+| search Image="C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+| table _time host User Image ParentImage CommandLine ProcessId ParentProcessId
+| sort - _time
 ```
 
 ### Observation
-The command was a powershell command that was used to write a file called `AI SOC PROJECT`
+
+Sysmon Event ID 1 recorded a PowerShell process execution associated
+with the `kaizen` user.
+
+The command line indicated that PowerShell was used to write/create a
+file named `AI SOC PROJECT`.
+
+The event was successfully ingested into Splunk, confirming that the
+controlled PowerShell execution generated the expected Sysmon
+telemetry.
 
 ### Evidence
 
-[Link to screenshot]
+![PowerShell Process Creation](Evidence/endpoints/powershell-process-creation.png)
 
 ### Assessment
-From my Investigation I can say this was just an attempt to see if logs we're actually passing through or the user testing his knowledge
+
+The observed PowerShell activity was generated as part of an authorized
+controlled test of the SOC laboratory's telemetry pipeline.
+
+The activity successfully generated Sysmon Event ID 1 telemetry and was
+visible in Splunk.
+
+No malicious activity is concluded from this test. The purpose of this
+stage was to validate that PowerShell process execution could be
+observed and investigated through the existing telemetry pipeline.
