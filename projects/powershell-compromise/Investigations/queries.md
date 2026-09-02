@@ -112,7 +112,7 @@ telemetry.
 
 ### Evidence
 
-![PowerShell Process Creation](Evidence/endpoints/powershell-process-creation.png)
+![PowerShell Process Creation](Evidence/endpoints/log-discovery.png)
 
 ### Assessment
 
