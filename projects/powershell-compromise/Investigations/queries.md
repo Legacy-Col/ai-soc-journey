@@ -72,7 +72,7 @@ E2F5C2B9E4FBF021D0559F14F657C864AB500D7C6036A9EF488FB99CEA4883D
 
 ### Evidence
 
----> ![Virustotal hash analysis](Evidence/endpoints/virustotal-hash-analysis.png)
+---> ![Virustotal hash analysis](../Evidence/endpoints/virustotal-hash-analysis.png)
 
 ### Assessment
 The report from VirusTotal came clean telling us that the process is a legitimate windows process.
@@ -112,7 +112,7 @@ telemetry.
 
 ### Evidence
 
-![PowerShell Process Creation](Evidence/endpoints/log-discovery.png)
+![PowerShell Process Creation](../Evidence/endpoints/log-discovery.png)
 
 ### Assessment
 
