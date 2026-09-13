@@ -22,24 +22,27 @@ Meridian is a fictional mid-sized Nigerian company with approximately 50 employe
 
 ### Assignment Objective
 ## Network Security
--- What systems are reachable?
--- What services are exposed?
--- What protocols are being used?
--- Are unnecessary services exposed?
--- Are there insecure protocols?
+- What systems are reachable?
+- What services are exposed?
+- What protocols are being used?
+- Are unnecessary services exposed?
+- Are there insecure protocols?
+  
 ## Host Security
--- What operating systems are present?
--- What software/services are running?
--- Are systems vulnerable?
--- Are default configurations creating risk?
+- What operating systems are present?
+- What software/services are running?
+- Are systems vulnerable?
+- Are default configurations creating risk?
+  
 ## Authentication & Access
--- Are authentication mechanisms secure?
--- Are there signs of weak access controls?
--- Can unauthorized access be achieved?
+- Are authentication mechanisms secure?
+- Are there signs of weak access controls?
+- Can unauthorized access be achieved
+  
 ## Vulnerability Management
--- Which vulnerabilities exist?
--- Which are actually exploitable?
--- What is their severity?
--- Which should be fixed first?
+- Which vulnerabilities exist?
+- Which are actually exploitable?
+- What is their severity?
+- Which should be fixed first?
 
 
