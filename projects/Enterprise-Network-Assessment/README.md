@@ -1,0 +1,1 @@
+This is a project that is meant to discribe or show how to carry out a Netwrok Assessment for an Enterprise. The project will display skills such as Vulnerability Assessment, Network Analysis, display my understanding of Windows, Linux, Security and Profesional Practice for a Cyber Security Specialist.
