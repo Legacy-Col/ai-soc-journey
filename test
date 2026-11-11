@@ -1,0 +1,28 @@
+Failed attempts: 9
+Successful attempts: 3
+Unique IP addresses: 3
+Unique IP addresses list: {'10.0.0.15', '172.16.0.20', '192.168.1.25'}
+Failed attempts by IP address:
+  192.168.1.25: 5
+  172.16.0.20: 2
+  10.0.0.15: 2
+IP addresses with failed attempts above threshold (3):
+  192.168.1.25: 5
+
+ --- Security Events Summary --- 
+Total Events: 12
+Total Failed Attempts: 9
+Total Successful Attempts: 3
+Total Unique IP Addresses: 3
+
+--- Failed Attempts by IP Address ---
+IP Address: 192.168.1.25, Failed Attempts: 5
+IP Address: 172.16.0.20, Failed Attempts: 2
+IP Address: 10.0.0.15, Failed Attempts: 2
+ 
+ Threat Analysis: Critical
+Critical: An IP address has been detected with the threshold of more than 3 failed attempts 192.168.1.25. 
+
+ --- individual IP Address Analysis --- 
+IP Address: 192.168.1.25 has 5 failed attempts, which exceeds the threshold of 3.
+Action Required: Immediate investigation needed for the above IP addresses.
